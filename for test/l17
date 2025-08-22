@@ -1,0 +1,17 @@
+import requests
+
+
+
+def parse():
+    body = {
+        "userId": 1, "title": "rneoigno3w4gno3wrg5n", "id":"25"
+    }
+    headers={'Content-Type': 'application/json'}
+    resp = requests.post(
+        'https://jsonplaceholder.typicode.com/posts',
+        json=body,
+        headers=headers
+    ).json()
+    print(resp)
+
+parse()
